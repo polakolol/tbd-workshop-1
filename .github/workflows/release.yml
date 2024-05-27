@@ -42,9 +42,6 @@ jobs:
     - name: Terraform Init
       id: init
       run: terraform init -backend-config=env/backend.tfvars
-    - name: Terraform Init
-      id: unlock
-      run: terraform force-unlock -force 1716820089076596
     - name: Terraform Apply
       id: apply
       run: terraform apply -no-color -var-file env/project.tfvars -auto-approve
